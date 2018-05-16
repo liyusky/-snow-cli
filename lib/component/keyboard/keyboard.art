@@ -1,0 +1,14 @@
+<ul class="keyboard{{if hide}} hide{{/if}}" id="keyboard">
+  <li class="key number" onclick="javascript: entey('1');" data-value="1">1</li>
+  <li class="key number" onclick="javascript: entey('2');" data-value="2">2</li>
+  <li class="key number" onclick="javascript: entey('3');" data-value="3">3</li>
+  <li class="key number" onclick="javascript: entey('4');" data-value="4">4</li>
+  <li class="key number" onclick="javascript: entey('5');" data-value="5">5</li>
+  <li class="key number" onclick="javascript: entey('6');" data-value="6">6</li>
+  <li class="key number" onclick="javascript: entey('7');" data-value="7">7</li>
+  <li class="key number" onclick="javascript: entey('8');" data-value="8">8</li>
+  <li class="key number" onclick="javascript: entey('9');" data-value="9">9</li>
+  <li class="key"{{if allow}} onclick="javascript: entey('.');"{{/if}} data-value=".">&bull;</li>
+  <li class="key number" onclick="javascript: entey('0');" data-value="0">0</li>
+  <li class="key" onclick="javascript: rollback();"></li>
+</ul>

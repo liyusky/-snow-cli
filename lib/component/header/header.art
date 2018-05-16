@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="sign">
+    <div onclick="javascript: kill();">
+      <i class="iconfont icon-arrow-left"></i>
+    </div>
+    <div{{if other && other.click}} onclick="javascript: {{other.click}}({{if other && other.page}}'{{other.page}}'{{/if}});"{{/if}}>
+      {{if other}}
+        {{other.content}}
+      {{/if}}
+    </div>
+  </div>
+  <div class="title">{{title}}</div>
+</header>

@@ -1,0 +1,10 @@
+{{if sign === 'single'}}
+  <div class="input-group{{if hasBottomBorder}} border-bottom-1{{/if}}">
+    <input class="input-control" id="{{id}}" type="{{type}}"{{if placeholder}} placeholder="{{placeholder}}"{{/if}}{{if input}} oninput="javascript: {{input}}(this);"{{/if}}{{if max}} maxlength="{{max}}"{{/if}}>
+  </div>
+{{else if sign === 'group'}}
+  <div class="input-group">
+    <div>{{title}}</div>
+    <input class="input-control" type="{{type}}"{{if id}} id="{{id}}"{{/if}}{{if placeholder}} placeholder="{{placeholder}}"{{/if}}{{if input}} oninput="javascript: {{input}}(this);"{{/if}}>
+  </div>
+{{/if}}

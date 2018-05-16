@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{{include '../annotation.art' page}}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+  <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+  {{include '../link.art' head}}
+</head>
+
+<body class="selector">
+  <section class="selector-bg" onclick="javascript: colse();"></section>
+  <footer class="selector-content">
+    {{block 'selector-content'}}{{/block}}
+  </footer>
+</body>
+</html>

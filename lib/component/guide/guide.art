@@ -1,0 +1,49 @@
+<div class="guide-group{{if hasBottomBorder}} border-bottom-1{{/if}}">
+  
+    <div class="board-name">
+      {{if hasDisc}}
+        <span class="disc"></span>
+      {{/if}}
+      {{title}}
+    </div>
+    <div class="board-content"{{if contentId}} id="{{contentId}}"{{/if}}>
+      {{if messageArr}}
+        {{each messageArr}}
+          <span{{if $value.id}} id="{{$value.id}}"{{/if}}>{{$value.content}}</span>
+        {{/each}}      
+      {{/if}}
+
+      {{if input}}
+        <input{{if input.id}} id="{{input.id}}"{{/if}} type="{{input.type}}" placeholder="{{input.placeholder}}" maxlength="{{input.maxlength}}" {{if input.input}} oninput="javascript: {{input.input}}(this
+          {{if input.inputParam}}
+            , '{{input.inputParam}}'
+          {{/if}}
+        );"{{/if}}
+        {{if input.maxlength}}
+          maxlength="{{input.maxlength}}"
+        {{/if}}
+        {{if input.readonly}}
+          readonly="readonly"
+        {{/if}}
+        >
+      {{/if}}
+
+
+      {{if icon}} 
+        <i class="iconfont icon-{{icon}}"></i>
+      {{/if}}
+
+      {{if message}}
+        <span{{if message.id}} id="{{message.id}}"{{/if}}>{{message.content}}</span>
+      {{/if}}
+      
+      {{if btn}}
+        <button{{if btn.click}} onclick="{{btn.click}}()"{{/if}}{{if btn.id}} id="{{btn.id}}"{{/if}}>{{btn.content}}</button>
+      {{/if}}
+
+      {{if image}}
+        <img src=""{{if image.click}} onclick="javascript: {{image.click}}(this);"{{/if}}{{if image.id}} id="{{image.id}}"{{/if}}>
+      {{/if}}
+    </div>
+
+</div>

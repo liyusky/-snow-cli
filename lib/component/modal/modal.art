@@ -1,0 +1,4 @@
+<section class="modal hide" id="modal">
+  <div class="modal-bg" onclick="javascript: closeModal();"></div>
+  {{block 'modal-content'}}{{/block}}
+</section>

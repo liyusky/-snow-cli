@@ -1,0 +1,46 @@
+@mixin note ($height, $fontSize, $color) {
+  .note{
+    $param: (flex inline-flex)
+      (alignItems center);
+    @include flexSet($param);
+    width: 100%;
+    padding-left: 30 / $unit * $symbol;
+    height: $height / $unit * $symbol;
+    font-size: $fontSize / $unit * $symbol;
+    color: $color;
+  }
+}
+
+@mixin notes ($height, $bg, $color, $fontSize) {
+  .notes{
+    $param: (flex flex)
+      (direction column)
+      (justifyContent space-around);
+    @include flexSet($param);
+    width: 100%;
+    height: $height / $unit * $symbol;
+    padding: {
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+
+    background-color: $bg;
+
+    .note-item{
+      color: $color;
+      font-size: $fontSize / $unit * $symbol;
+    }
+  }
+}
+
+@mixin notesControl () {
+  .notes .note-item {
+    b {
+      color: #333333;
+    }
+
+    span {
+      color: #666666;
+    }
+  }
+}

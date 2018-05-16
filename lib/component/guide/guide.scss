@@ -1,0 +1,78 @@
+.guide-group{
+  height: 102 / $unit * $symbol;
+  width: 720 / $unit * $symbol;
+  padding: {
+    right: 30  / $unit * $symbol;
+  }
+  $param: (flex flex)
+    (alignItems center)
+    (justifyContent space-between);
+  @include flexSet($param);
+
+  .board-name {
+    width: 180 / $unit * $symbol;
+    height: 100%;
+    $param: (flex flex)
+      (alignItems center);
+    @include flexSet($param);
+    font-size: 27 / $unit * $symbol;
+  }
+
+  .board-content {
+    width: 510 / $unit * $symbol;
+    height: 100%;
+    $param: (flex flex)
+      (alignItems center);
+    @include flexSet($param);
+    font-size: 27 / $unit * $symbol;
+    color: #666666;
+
+    input {
+      $param: (flex inline-flex)
+      (alignItems center)
+      (justifyContent flex-end);
+      @include flexSet($param);
+      height: 100%;
+      padding-right: 21 / $unit * $symbol;
+      font-size: 27 / $unit * $symbol;
+      color: #999999;
+    }
+
+    input::-webkit-input-placeholder {
+      $param: (flex flex)
+        (alignItems center);
+      @include flexSet($param);
+      font-size: 30 / $unit * $symbol;
+      color: #999999 !important;
+    }
+
+    button {
+      height: 100%;
+      font-size: 27 / $unit * $symbol;
+      background-color: #fff;
+      color: #4d7bfe;
+    }
+    img{
+      width: 120 / $unit * $symbol;
+      height: 60 / $unit * $symbol;
+    }
+    .i{
+      width: 60 / $unit * $symbol;
+      height: 100%;
+      font-size: 27 / $unit * $symbol;
+    }
+  }
+}
+
+@mixin disc () {
+  .disc {
+    display: inline-block;
+    width: 9 / $unit * $symbol;
+    height: 9 / $unit * $symbol;
+    border-radius: 50%;
+    background-color: #4d7bfe;
+    margin-right: 15 / $unit * $symbol;
+  }
+}
+
+

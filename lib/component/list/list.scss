@@ -1,0 +1,18 @@
+.list{
+  width: 100%;
+  height: auto;
+
+  .list-item{
+    width: 100%;
+    height: auto;
+    $param: (flex flex)
+      (direction row);
+    @include flexSet($param);
+  }
+}
+
+@mixin list () {
+  .list {
+    background-color: #ffffff;
+  }
+}

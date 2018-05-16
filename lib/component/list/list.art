@@ -1,0 +1,23 @@
+{{if imported}}
+  {{block 'default-top'}}{{/block}}
+  <ul class="list{{if marginTop}} margin-top-{{marginTop}}{{/if}}{{if hasBottomBorder}} border-bottom-1{{/if}}"{{if id}} id="{{id}}"{{/if}}>
+    {{block 'default-li'}}{{/block}}
+    {{each content}}
+      <li class="list-item"{{if $value.click}} onclick="javasript: {{$value.click}}({{if $value.page}}'{{$value.page}}'{{/if}});"{{/if}}{{if $value.id}} id="{{$value.id}}"{{/if}}>
+        {{if $value.flag === 'input'}}
+          {{include '../input/input.art' $value}}
+        {{else if $value.flag === 'guide'}}
+          {{include '../guide/guide.art' $value}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+  {{block 'default-bottom'}}{{/block}}
+{{else}}
+  {{block 'other-top'}}{{/block}}
+  <ul class="list{{if list.marginTop}} margin-top-{{list.marginTop}}{{/if}}{{if list.borderBottom}} border-bottom-1{{/if}}"{{if list.id}} id="{{list.id}}"{{/if}}>
+    {{block 'list-item'}}{{/block}}
+  </ul>
+  {{block 'other-bottom'}}{{/block}}
+{{/if}}
+

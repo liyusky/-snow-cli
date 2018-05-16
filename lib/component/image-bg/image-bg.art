@@ -1,0 +1,1 @@
+<img class="image-bg" src="{{src}}"{{if id}} id="{{id}}"{{/if}}>

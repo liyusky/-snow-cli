@@ -1,0 +1,58 @@
+@mixin input ($type, $height) {
+  .input-group {
+    width: 100%;
+    height: $height / $unit * $symbol;
+    padding: {
+      // left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    @if $type=='single' {
+      $param: (flex flex) (alignItems center);
+      @include flexSet($param);
+      .input-control {
+        width: 100%;
+        $param: (flex flex) (alignItems center);
+        @include flexSet($param);
+        height: 60 / $unit * $symbol;
+        padding: {
+          left: 30 / $unit * $symbol;
+          right: 30 / $unit * $symbol;
+        }
+        font-size: 30 / $unit * $symbol;
+        color: #999999;
+      }
+      .input-control::-webkit-input-placeholder {
+        $param: (flex inline-flex) (alignItems center);
+        @include flexSet($param);
+        font-size: 30 / $unit * $symbol;
+        color: #999999 !important;
+      }
+    }
+    @else if $type=='group' {
+      $param: (flex flex) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      div {
+        width: 180 / $unit * $symbol;
+        height: 100%;
+        $param: (flex flex) (alignItems center);
+        @include flexSet($param);
+        font-size: 30 / $unit * $symbol;
+        color: #333333;
+      }
+      input {
+        width: 510 / $unit * $symbol;
+        height: 100%;
+        $param: (flex inline-flex) (alignItems center);
+        @include flexSet($param);
+        font-size: 30 / $unit * $symbol;
+        color: #666666;
+      }
+      input::-webkit-input-placeholder {
+        $param: (flex inline-flex) (alignItems center);
+        @include flexSet($param);
+        font-size: 30 / $unit * $symbol;
+        color: #999999;
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<section class="selector hide" id="selector">
+  <div class="selector-bg" onclick="javascript: closeSelector();"></div>
+    {{block 'selector-content'}}{{/block}}
+</section>

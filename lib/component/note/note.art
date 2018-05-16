@@ -1,0 +1,18 @@
+{{if type === 'single'}}
+  <p class="note{{if marginTop}} margin-top-{{marginTop}}{{/if}}"{{if id}} id="{{id}}"{{/if}}>{{message}}</p>
+{{else if type === 'group'}}
+  <section class="notes{{if marginTop}} margin-top-{{marginTop}}{{/if}}">
+    {{each content}}
+      {{if $value.title}}
+        <p class="note-item">
+          <b>{{$value.title}}</b>
+          {{if $value.message}}
+            <span>{{$value.message}}</span>
+          {{/if}}
+        </p>
+      {{else}}
+        <p class="note-item">{{$value}}</p>
+      {{/if}}
+    {{/each}}
+  </section>
+{{/if}}

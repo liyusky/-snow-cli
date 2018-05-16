@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{{include '../annotation.art' page}}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=400, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    {{include '../link.art' head}}
+  </head>
+  <body>
+    {{block 'body'}}{{/block}}
+    <div class="clearfix"></div>    
+    {{include '../script.art' script}}
+  </body>
+</html>

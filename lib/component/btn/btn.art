@@ -1,0 +1,9 @@
+<button class="btn-{{style}}
+{{if disable}} disabled{{/if}}
+{{if marginTop}} margin-top-{{marginTop}}{{/if}}"
+{{if click}} onclick="javascipt: {{click}}(
+{{if param}}{{param}}{{/if}}
+);"{{/if}}
+{{if disable}} disabled="disabled"{{/if}}
+{{if id}} id="{{id}}"{{/if}}
+>{{content}}</button>

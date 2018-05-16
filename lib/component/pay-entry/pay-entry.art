@@ -1,0 +1,9 @@
+<ul class="pay-password {{if marginTop}}margin-top-{{marginTop}}{{/if}}" onclick="show('keyboard')">
+  <li class="pay-key"></li>
+  <li class="pay-key"></li>
+  <li class="pay-key"></li>
+  <li class="pay-key"></li>
+  <li class="pay-key"></li>
+  <li class="pay-key"></li>
+</ul>
+{{include '../keyboard/keyboard.art' keyboard}}

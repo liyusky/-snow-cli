@@ -1,0 +1,13 @@
+<title>{{title}}</title>
+
+{{if css}}
+  {{each css}}
+    <link rel="stylesheet" type="text/css" href="{{$value}}">
+  {{/each}}
+{{/if}}
+
+{{if js}}
+{{each js}}
+  <script type="text/javascript" charset="utf-8" src="{{$value}}"></script>
+{{/each}}
+{{/if}}

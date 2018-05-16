@@ -1,0 +1,42 @@
+@mixin btn ($type) {
+  .btn-#{$type} {
+    $param: (flex flex)
+      (alignItems center)
+      (justifyContent center);
+    @include flexSet($param);
+    font-size: 36 / $unit * $symbol;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    @if $type == white {
+      width: 100%;
+      height: 102 / $unit * $symbol;
+      background-color: #ffffff;
+      color: #333333;
+      font-size: 30 / $unit * $symbol;
+    }
+    @else if $type == red {
+      width: 100%;
+      height: 102 / $unit * $symbol;
+      background-color: #ffffff;
+      border-radius: 12 / $unit * $symbol;
+      color: #fc3438;
+      font-size: 30 / $unit * $symbol;
+    }
+    @else if $type == blue {
+      width: 690 / $unit * $symbol;
+      height: 102 / $unit * $symbol;
+      background-color: #4d7bfe;
+      color: #ffffff;
+      border-radius: 12 / $unit * $symbol;
+    }
+  }
+
+  @if $type != write {
+    .disabled{
+      opacity: 0.5;
+    }
+  }
+}

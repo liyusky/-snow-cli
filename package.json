@@ -1,0 +1,27 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "an empty cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "snow test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liyusky/-snow-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "snow"
+  ],
+  "author": "liyusky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liyusky/-snow-cli/issues"
+  },
+  "homepage": "https://github.com/liyusky/-snow-cli#readme",
+  "devDependencies": {
+    "commander": "^2.15.1",
+    "sass": "^1.3.2"
+  }
+}
